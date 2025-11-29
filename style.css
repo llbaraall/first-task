@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none ;
+    
+}
+ol{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+   
+}
+.btn1{
+    color: rgb(35 167 171);
+    border: 1px solid rgb(35 167 171);
+    background-color: white;
+    border-radius: 100px;
+    padding: .75rem;
+
+}
+.btn2{
+   color: white;
+    border: 1px solid rgb(35 167 171);
+    background-color: rgb(35 167 171);
+    border-radius: 10px;
+    padding: .75rem;
+  
+    width: fit-content;
+}
+p {
+    color: #4F5665;
+}
+h1, h2, h3, h4, h5 {
+    color: #0B132A;
+}
+
+.main-color{
+    color: rgb(35 167 171);
+}
+.section-padding{
+    padding : 2rem0 ;
+}
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;        
+}
+
+header{
+    padding: 1rem 0 ;
+ 
+    box-shadow: inset 0 0 8px rgb(35 167 171);
+}
+header.logo{
+    flex-basis: 20%;
+}
+header .logo img {
+    width: 30%;
+}
+header.ul a {
+    color: #4f5665;
+}
+
+
+@media (max-width : 680px) {
+header.logo {
+    flex-basis: 20%;
+}
+
+header.logo img{
+    width: 50%;
+}
+.icons{
+    justify-self: center;
+}
+header ul.row {
+  display: none;
+}
+
+}
+#check ~ label {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(35,167,171);
+}
+#check{
+    display: none;
+}
+@media (max-width: 680px) {
+.logo {
+    width: 20%;
+    margin-right:auto ;
+}
+    /* ROW becomes centered items */
+    .header .row {
+        position: relative;
+        justify-content: center;
+    }
+
+    /* Center heart + search */
+    .icons {
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Hamburger icon visible & RIGHT */
+    #check ~ label {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    /* Hide menu on small screens */
+    header ul.row {
+        display: none;
+    }
+
+    /* Show menu when checkbox is checked */
+    #check:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        background: white;
+        padding: 1rem;
+        gap: 1rem;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+}
