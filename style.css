@@ -1,9 +1,67 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
-html{
-    scroll-behavior: smooth;
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--netural-white);
+}
+
+.dark-theme {
+  background: var(--dark-theme);
+
+  --primary-blue: #089da1;
+  --text-gray: var(--titles-dark-theme);
+  --netural-black: var(--titles-dark-theme);
+  --netural-white: var(--dark-theme);
+  --featured-cards-name: var(--titles-dark-theme);
+}
+
+section {
+  min-height: 80vh;
+  padding: 10rem 7% 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.section-title {
+  font-size: var(--featured-title-fs);
+  color: var(--netural-black);
+}
+
+.learn-more {
+  background: transparent;
+  border: 2px solid var(--primary-blue);
+  padding: 0.3rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 0.5rem;
+  color: var(--netural-black);
+
+  &:hover {
+    background: var(--primary-blue);
+    color: var(--netural-white);
+    font-weight: 600;
+    box-shadow: 1px 1px 5px var(--primary-blue);
+  }
 }
 ul {
     list-style: none ;
@@ -149,4 +207,73 @@ header ul.row {
         gap: 1rem;
         box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
+}
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("assets/image/reading.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 8rem 7% 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    opacity: 0.88;
+    z-index: 0;
+  }
+
+  .welcome {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    padding: 5rem;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 2rem 0;
+      line-height: 1.5;
+      color: #333;
+    }
+  }
+
+  .books {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    text-align: center;
+
+    .shelf-img {
+      margin-top: -2rem;
+      width: 100%;
+      max-width: 280rem;
+      z-index: 0;
+      position: relative;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: teal;
+  }
 }
