@@ -4,37 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="logo">
-                    <img src="image/logo.png" alt="logo">
-                </div>
-                <input type="checkbox" id ="check">
-                <label for="check"><i class="fa-solid fa-bars"></i></label>
-                
-                <ul class="row">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about </a></li>
-                    <li><a href="#">features</a></li>
-                    
-                    <li><a href="#">arrivals</a></li>
-                    <li><a href="#">rivewos</a></li>
-                    <li><a href="#">blog</a></li>
-                   
-                    
-                </ul>
-                 <div class="icons">
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                 </div>
-            </div>
+      <img class="logo" src="image/logo.png" alt="" />
+
+      <nav class="navbar">
+        <a class="nav-links" href="#home">Home</a>
+        <a class="nav-links" href="#about">About</a>
+        <a class="nav-links" href="#featured">Featured</a>
+        <a class="nav-links" href="#arrivals">Arrivals</a>
+        <a class="nav-links" href="#reviews">Reviews</a>
+        <a class="nav-links" href="#blog">Blog</a>
+      </nav>
+
+      <div class="icons">
+        <div class="search-wrapper">
+          <input type="text" class="" id="searchInput" placeholder="Search" />
+          <i class="bx bx-search" id="searchIcon"></i>
         </div>
+
+        <div class="palette-wrapper">
+          <i class="bx bxs-palette" id="colorIcon"></i>
+          <input type="color" id="colorPicker" />
+        </div>
+
+        <i class="bx bx-adjust" id="theme"></i>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <i class="bx bx-x" id="closeMenu"></i>
+        <nav class="mobile-navbar">
+          <a class="nav-links" href="#home">Home</a>
+          <a class="nav-links" href="#about">About</a>
+          <a class="nav-links" href="#featured">Featured</a>
+          <a class="nav-links" href="#arrivals">Arrivals</a>
+          <a class="nav-links" href="#reviews">Reviews</a>
+          <a class="nav-links" href="#blog">Blog</a>
+        </nav>
+      </div>
     </header>
+
     <section class="hero" id="home">
       <div class="welcome">
         <h1>
@@ -83,6 +100,26 @@
       </div>
     </section>
 
+
+    <section class="about-us" id="about">
+      <div class="about-img">
+        <img src="image/about.png" alt="Reading Books" />
+      </div>
+
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+          cumque atque dolor corporis architecto. Voluptate expedita molestias
+          maxime officia natus consectetur dolor quisquam illo? Quis illum
+          nostrum perspiciatis laboriosam perferendis? Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Minus ad eius saepe architecto
+          aperiam laboriosam voluptas nobis voluptates id amet eos repellat
+          corrupti harum consectetur, dolorum dolore blanditiis quam quo.
+        </p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </section>
    
 </body>
 </html>
